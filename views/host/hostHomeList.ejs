@@ -1,0 +1,25 @@
+<%- include('../partials/head') %>
+</head>
+<body>
+  <%- include('../partials/hostnavbar') %>
+  <main class="min-h-[calc(100vh-72px)] bg-gray-50">
+    <h2 class="text-4xl font-bold text-center text-gray-800 py-4">Host Home List</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-4 pt-10">
+      <% houseList.forEach((elem) => { %>
+        <div class="bg-red-100 p-6 h-full w-[90vw] lg:w-[20vw] rounded-2xl shadow-md flex flex-col items-center justify-center hover:bg-red-50 hover:scale-105 transition-all duration-200">
+          <img src="https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg?cs=srgb&dl=pexels-pixabay-259962.jpg&fm=jpg" alt="home" class="object-cover w-full mb-4 rounded-2xl">
+          <h2 class="text-bold text-2xl text-red-900"><%= elem.homename %></h2>
+          <h4 class="text-semibold text-lg text-gray-700"><%= elem.address %></h4>
+          <h4 class="text-semibold text-lg text-gray-700"><%= elem.price %></h4>
+          <div class="flex gap-2">
+            <a href="/host/edit-home/<%= elem._id%>?editing=true" class="text-center flex-1 p-2 hover:bg-gray-300 w-30 rounded-3xl bg-red-400 duration-300 active:scale-95">Edit</a>
+            <form action="/host/delete/<%= elem._id %>" method="post">
+            <button type="submit" class="flex-1 p-2 hover:bg-gray-300 bg-red-400 w-30 rounded-3xl">Delete</button>
+            </form>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </main>
+</body>
+</html>

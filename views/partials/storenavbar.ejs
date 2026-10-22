@@ -1,0 +1,35 @@
+<header>
+  <nav
+    class="flex items-center justify-between bg-red-500 text-white py-4 px-8 shadow-md"
+  >
+    <div class="text-xl font-semibold">Airbnb</div>
+    <div class="flex gap-6 items-center">
+      <a href="/store/home" class="text-sm rounded-md px-4 py-2  font-medium <%= currentPage === 'Home' ? 'bg-red-400' : 'hover:bg-red-400' %>" >Home</a>
+      <a
+        href="/store/booking"
+        class="rounded-md px-4 py-2 font-semibold <%= currentPage === 'Bookings' ? 'bg-red-400' : 'hover:bg-red-400' %>"
+        >Bookings
+      </a>
+      <a
+        href="/store/favouriteList"
+        class="rounded-md px-4 py-2 font-semibold <%= currentPage === 'Favourites' ? 'bg-red-400' : 'hover:bg-red-400' %>"
+        >Favourites
+      </a>
+      <a
+        href="/store/reserve"
+        class="rounded-md px-4 py-2 font-semibold <%= currentPage === 'Reserved' ? 'bg-red-400' : 'hover:bg-red-400' %>"
+        >Reserve
+      </a>
+      <a
+        href="/host/add-home"
+        class="rounded-md px-4 py-2 font-semibold <%= currentPage === 'add' ? 'bg-red-400' : 'hover:bg-red-400' %>"
+        >Add home
+      </a>
+      <a
+        href="/host/hostHomeList"
+        class="rounded-md px-4 py-2 font-semibold <%= currentPage === 'hostHome' ? 'bg-red-400' : 'hover:bg-red-400' %>"
+        >Host-HomeList
+      </a>
+    </div>
+  </nav>
+</header>

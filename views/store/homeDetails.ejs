@@ -1,0 +1,18 @@
+<%- include('../partials/head') %>
+</head>
+<body>
+  <%- include('../partials/storenavbar') %>
+  <main class="min-h-[calc(100vh-72px)] bg-gray-50">
+    <h2 class="text-4xl font-bold text-center text-gray-800 pt-8 pb-4">Home Details Page</h2> 
+    <div class="flex justify-center items-center py-10">
+      <div class="bg-red-100 p-6 h-full w-[90vw] lg:w-[20vw] rounded-2xl shadow-md flex flex-col items-center justify-center hover:bg-red-200 transition-all duration-200">
+          <img src="https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg?cs=srgb&dl=pexels-pixabay-259962.jpg&fm=jpg" alt="home" class="object-cover w-full mb-4 rounded-2xl">
+          <h2 class="text-bold text-2xl text-red-900"><%= homeDetails.homename %></h2>
+          <h4 class="text-semibold text-lg text-gray-700"><%= homeDetails.address %></h4>
+          <h4 class="text-semibold text-lg text-gray-700"><%= homeDetails.price %></h4>
+          <%- include('../partials/fav') %>
+      </div>
+    </div> 
+  </main>
+</body>
+</html>
